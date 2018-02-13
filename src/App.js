@@ -22,7 +22,7 @@ class App extends Component {
         
     }
     componentDidMount(){
-     this.socket = mySocket("https://interactiveworld.herokuapp.com/");
+     this.socket = mySocket("https://worldwebapp.herokuapp.com/");
         
     }
     
