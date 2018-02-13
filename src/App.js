@@ -22,7 +22,7 @@ class App extends Component {
         
     }
     componentDidMount(){
-     this.socket = mySocket("https://worldwebapp.herokuapp.com/");
+     //this.socket = mySocket("https://worldwebapp.herokuapp.com/");
         
     }
     
@@ -31,7 +31,7 @@ class App extends Component {
             mode:1
             
         })
-        this.socket = mySocket("http://localhost:10001")
+        this.socket = mySocket("https://worldsockets.herokuapp.com")
         this.socket.emit("username", this.state.username);
         
         this.socket.on("usersjoined", (data)=>{
