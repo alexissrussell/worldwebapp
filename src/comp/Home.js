@@ -8,7 +8,7 @@ class Home extends Component {
         
     }
 	componentDidMount(){
-		this.socket = mySocket("http://localhost:10000");
+		this.socket = mySocket("http://worldsockets.herokuapp.com");
 			
 		};
 

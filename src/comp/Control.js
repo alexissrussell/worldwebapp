@@ -37,8 +37,8 @@ class Control extends Component {
         
         <div id="buts" onClick = {this.changePage1}> CHATROOM </div>
         <div id="buts" onClick = {this.changePage2}> STICKER PAGE </div>
-        <div id="buts" onClick = {this.changePage3}> QUIZ </div>
-		<div  id="buts" onClick = {this.changePage4}> BACKGROUND </div>
+		<div  id="buts" onClick = {this.changePage3}> BACKGROUND </div>
+        <div id="buts" onClick = {this.changePage4}> QUIZ </div>
         
       </div>
         

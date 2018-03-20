@@ -10,12 +10,11 @@ class Quiz extends Component {
 			host:null,
 			qobj:{q:null, o1:null, o2:null}
 		}
-//		this.handleStage = this.handleStage.bind(this);
 	}
 	
 
 	componentDidMount(){
-		this.socket = mySocket("http://localhost:10000");
+		this.socket = mySocket("http://worldsockets.herokuapp.com");
 		this.socket.on("newq", (data)=>{
 			this.setState({
 				qobj:data	
@@ -69,17 +68,17 @@ class Quiz extends Component {
 	  
 	  if(this.state.stage === 0){
 	  comp2 = (
-	  	<div>
-			<button onClick={this.handleStage.bind(this, 1, "room1")}>Room 1</button>
-			<button onClick={this.handleStage.bind(this, 1, "room2")}>Room 2</button>
+	  	<div id="butsWrapper">
+			<div id="buts" onClick={this.handleStage.bind(this, 1, "room1")}>Quiz 1</div>
+			<div id="buts" onClick={this.handleStage.bind(this, 1, "room2")}>Quiz 2</div>
 		</div>
 		  
 	  );
 	  }else if(this.state.stage ===  1){
 		  comp2 = (
-	  	<div>
-			<button onClick={this.handlePlayers.bind(this, true)}>HOST</button>
-			<button onClick={this.handlePlayers.bind(this, false)}>PLAYER</button>
+	  	<div id="butsWrapper">
+			<div id="buts" onClick={this.handlePlayers.bind(this, true)}>HOST</div>
+			<div id="buts" onClick={this.handlePlayers.bind(this, false)}>PLAYER</div>
 		</div>
 		  
 	  );
@@ -87,24 +86,25 @@ class Quiz extends Component {
 	  else if(this.state.stage === 2){
 		  if(this.state.host ===true){
 			  comp2 = (
-	  	<div>
-			<input ref="q" type="text" placeholder="Type your question here" />
-			<input ref="o1" type="text" placeholder="Option 1" />
-			<input ref="o2" type="text" placeholder="Option 2" />
+	  	<div id ="quizWrapper">
+			<input id="buts" ref="q" type="text" placeholder="Type Question" />
+    
+			<input  id = "buts" ref="o1" type="text" placeholder="Option 1" /> 
+			<input id = "buts" ref="o2" type="text" placeholder="Option 2" /> 
 			<select ref="a">
 				  <option value="1">Option 1</option>
 				  <option value="2">Option 2</option>
 			</select>
-			<button onClick={this.handleQuestion}>Submit Question</button>
+			<div id="buts" onClick={this.handleQuestion}>Submit Question</div>
 		</div>  
 	  );
 		  }
 		  else if(this.state.host === false){
 			  comp2 = (
-	  	<div>
+	  	<div id="quizWrapper">
 			<div>{this.state.qobj.q}</div>
-			<button onClick = {this.handleAnswer.bind(this, "1")}>{this.state.qobj.o1}</button>
-			<button onClick = {this.handleAnswer.bind(this, "2")}>{this.state.qobj.o2}</button>
+			<button onClick = {this.handleAnswer.bind(this, "1")}>{this.state.qobj.o1}A </button>
+			<button onClick = {this.handleAnswer.bind(this, "2")}>{this.state.qobj.o2}B </button>
 		</div>
 		  
 	  );

@@ -219,7 +219,7 @@ body {
     margin: 1.3rem 0rem 0rem 1rem;
     padding: .8rem;
     border: 2px solid white;
-    background-color: rgba(255, 255, 255, .4);
+    background-color: rgba(255, 255, 255, .5);
     cursor: pointer;
     color: white;
     font-family: "Roboto";
@@ -243,11 +243,8 @@ body {
     letter-spacing: 5px;
 }
 
-
-
 #joinChat {
-   border: 2px solid white;
-    
+    border: 2px solid white;
 }
 
 .enter-item {
@@ -460,4 +457,67 @@ body {
 
 .allImgs {
     position: absolute;
+}
+
+
+/* QUIZ */
+
+#quizWrapper{
+    display: flex;
+    flex-flow: row;
+    align-content: center;
+    justify-content: center;
+    margin-top: 5rem;
+    font-family: 13pt;
+   
+}
+
+::placeholder {
+    color: white;
+    font-size: 13pt;
+    font-family: "Roboto";
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    flex-flow: row;
+    align-content: center;
+    justify-content: center;
+    
+    
+}
+
+/* BACKGROUND */
+
+#bgTitle {
+    margin-top: 6vw;
+    color: white;
+    font-family: 'Roboto';
+    font-size: 18pt;
+    letter-spacing: 3px;
+    text-shadow: 2px 1px rgba(0, 0, 0, .5);
+}
+
+#changeBG {
+    height: 100vh;
+    margin-top: 2vw;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, .4);
+    color: white;
+    height: 2.5vw;
+    width: 11vw;
+    font-size: 14pt;
+   
+}
+
+.BGbutt {
+    margin: 1.3rem 0rem 0rem 1rem;
+    padding: .2rem;
+    border: 2px solid white;
+    font-size: 1.5vw;
+    width: 7vw;
+    background-color: rgba(255, 255, 255, .4);
+    cursor: pointer;
+    color: white;
+    font-family: "Roboto";
+    font-weight: 500;
 }

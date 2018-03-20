@@ -75,10 +75,10 @@ class App extends Component {
           mycomp = <Stickers />
               
       } else if(this.state.showPage3 === true){
-          mycomp = <Quiz />
+          mycomp = <Background/>
 			  
       } else if(this.state.showPage4 === true){
-          mycomp = <Background />
+          mycomp = <Quiz />
       };
       
       
