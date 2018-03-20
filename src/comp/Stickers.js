@@ -21,7 +21,7 @@ class Stickers extends Component {
 	}
 	
 	componentDidMount(){
-		this.socket = mySocket("http://localhost:10000");
+		this.socket = mySocket("https://worldsockets.herokuapp.com/");
 		
 		this.socket.on("createimage", (data)=>{
 			this.setState({
