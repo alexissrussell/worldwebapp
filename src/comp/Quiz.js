@@ -14,7 +14,7 @@ class Quiz extends Component {
 	
 
 	componentDidMount(){
-		this.socket = mySocket("http://localhost:10000");
+		this.socket = mySocket("https://worldsockets.herokuapp.com/");
 		this.socket.on("newq", (data)=>{
 			this.setState({
 				qobj:data	
