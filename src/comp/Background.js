@@ -6,7 +6,7 @@ class Background extends Component {
   constructor() {
     super();
     this.state = {
-      endpoint: "http://localhost:10000",
+      endpoint: "https://worldsockets.herokuapp.com/",
       
       ///
       color: 'gray'
